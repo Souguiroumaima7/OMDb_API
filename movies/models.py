@@ -7,6 +7,7 @@ class SearchTerm(models.Model):
 
     term = models.TextField(unique=True)
     last_search = models.DateTimeField(auto_now=True)
+
 class Genre(models.Model):
     class Meta:
         ordering = ["name"]

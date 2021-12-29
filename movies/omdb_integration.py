@@ -8,6 +8,7 @@ from movies.django_client import get_client_from_settings
 from movies.models import Genre , Movie , SearchTerm
 
 logger = logging.getLogger(__name__)
+
 def get_or_create_genres(genre_names):
     for genre_name in genre_names:
         genre, created = Genre.objects.get_or_create(name=genre_name)
@@ -34,6 +35,7 @@ def fill_movie_details(movie):
         movie.genres.add(genre)
     movie.is_full_record = True
     movie.save()
+
 def search_and_save(search):
     """
     Perform a search for search_term against the API, but only if it hasn't been searched in the past 24 hours. Save
