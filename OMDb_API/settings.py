@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'movies',
-    'gh',
-    'django_celery_results',
+     'movies',
+     'gh',
+     'django_celery_results',
      'django_celery_beat'
 ]
 
